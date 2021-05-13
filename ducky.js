@@ -1,27 +1,45 @@
 // (238,0,220)
 // (21,185,255)
 // (255,168,21)
-let hasPlayed = false;
 document.body.style.animationPlayState = "paused";
-function handleFirstPlay(event) {
-  if(hasPlayed === false) {
-    hasPlayed = true;
+let audio = null;
+let anim = null;
+let audio_state = false;
+let audioFirstTime = true;
+let gifFirstTime = true;
+console.log(anim);
+
+window.onload = function(){
+  audio = document.getElementById("caramelaudio");
+  anim = document.getElementById("duckanim");
+  document.getElementById("caramelaudio").volume = 0.15;
+}
+
+// function handleFirstPlay(event) {
+//   if(audioFirstTime === true) {
+//     audioFirstTime = false;
     
-    let aud = event.target;
+//     let aud = event.target;
 
-    aud.onplay = null;
+//     aud.onplay = null;
 
-    document.getElementById("caramelaudio").volume = 0.15
-    document.getElementById("duckpng").src = "duck.gif";
+//   }
+function handleAudioState() {
+  if (gifFirstTime === true) {
+    gifFirstTime = false;
+    anim.src = "duck.gif";
+  }
+  if (audio_state === false) {
+    audio_state = true;
+    audio.play();
+    console.log("play");
+    anim.src = "duck.gif";
     document.body.style.animationPlayState = "running";
+  } else {
+    audio_state = false;
+    audio.pause();
+    console.log("pause");
+    anim.src = "duck.png";
+    document.body.style.animationPlayState = "paused";
   }
 }
-// function colorfulBackground() {
-//     let colors = ["#ee00dc", "#15b9ff", "#ffa915"];
-//     for (color=0; color<3; color++) {
-//             curr_color = colors[color];
-//             for (trans=0; trans<60; trans++) {
-//                 document.body.style.backgroundColor = curr_color;
-//             }
-//         }
-// }
