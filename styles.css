@@ -14,9 +14,9 @@
 body {
     background-color: rgb(253,251,251);
     overflow: hidden;
-    animation: colorchange 0.5s linear 1s infinite; /* animation-name followed by duration in seconds*/
+    animation: colorchange 500ms linear 1s infinite; /* animation-name followed by duration in seconds*/
        /* you could also use milliseconds (ms) or something like 2.5s */
-    -webkit-animation: colorchange 0.5s linear 0s infinite alternate; /* Chrome and Safari */
+    -webkit-animation: colorchange 500ms linear 0s infinite alternate; /* Chrome and Safari */
   }
   /* "#ee00dc", "#15b9ff", "#ffa915" */
   @keyframes colorchange
