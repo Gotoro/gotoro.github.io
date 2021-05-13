@@ -1,0 +1,34 @@
+.duck {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.audio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%
+}
+body {
+    overflow: hidden;
+    animation: colorchange 10s linear 1s infinite; /* animation-name followed by duration in seconds*/
+       /* you could also use milliseconds (ms) or something like 2.5s */
+    -webkit-animation: colorchange 10s linear 0s infinite alternate; /* Chrome and Safari */
+  }
+  /* "#ee00dc", "#15b9ff", "#ffa915" */
+  @keyframes colorchange
+  {
+    0%   {background: #ee00dc}
+    33%  {background: #15b9ff}
+    66%  {background: #ffa915}
+    100% {background: #ee00dc}
+ }
+
+  @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+  {
+    0%   {background: #ee00dc}
+    33%  {background: #15b9ff}
+    66%  {background: #ffa915}
+    100% {background: #ee00dc}
+ }
