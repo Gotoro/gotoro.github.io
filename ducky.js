@@ -32,13 +32,11 @@ function handleAudioState() {
   if (audio_state === false) {
     audio_state = true;
     audio.play();
-    console.log("play");
     anim.src = "duck.gif";
     document.body.style.animationPlayState = "running";
   } else {
     audio_state = false;
     audio.pause();
-    console.log("pause");
     anim.src = "duck.png";
     document.body.style.animationPlayState = "paused";
   }
