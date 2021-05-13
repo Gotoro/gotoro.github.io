@@ -3,6 +3,10 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    -ms-transform: scale(1.5, 1.5); /* IE 9 */
+    -webkit-transform: scale(1.5, 1.5); /* Safari */
+    transform: scale(1.5, 1.5);
+}
 }
 .audio {
     display: none;
