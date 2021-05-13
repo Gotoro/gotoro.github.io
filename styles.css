@@ -5,10 +5,11 @@
     height: 100vh;
 }
 .audio {
-    display: flex;
+    display: none;
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%
+    width: 100% */
 }
 body {
     background-color: rgb(253,251,251);
